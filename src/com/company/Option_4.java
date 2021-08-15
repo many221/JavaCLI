@@ -15,32 +15,41 @@ public static void run(){
     System.out.print ("Please Enter the Potential Factor: ");
     int p = Input.input.nextInt ();
 
-    ArrayList<Integer> factors = new ArrayList<Integer> ();
-
+    ArrayList<Integer> primeFactors = new ArrayList<Integer> ();
     while (f % 2 == 0) {
-       factors.add ( 2 );
+       primeFactors.add ( 2 );
         f /= 2;
     }
-
     // n must be odd at this point.  So we can
     // skip one element (Note i = i +2)
     for (int i = 3; i <= Math.sqrt(f); i += 2) {
         // While i divides n, print i and divide n
         while (f % i == 0) {
-            factors.add ( i );
+            primeFactors.add ( i );
             f /= i;
         }
     }
-
     // This condition is to handle the case whien
     // n is a prime number greater than 2
     if (f > 2)
-        factors.add ( f );
+        primeFactors.add ( f );
 
-    System.out.println ( factors);
+    System.out.println ( primeFactors);
     }
 
     public static void main(String[] args) {
         run ();
     }
 }
+//    int n; // input n
+//    int i=1; // initialize counter
+//    while(i <= sqrt(n)) // run loop i to sqrt(n)
+//            {
+//            if(n%i==0) {
+//            cnt++;
+//            if (i != (n / i)) {
+//            cnt++;
+//            }
+//            }
+//            i++;
+//            }
