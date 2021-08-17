@@ -3,7 +3,7 @@ package com.company;
 import java.util.Arrays;
 
 public class Option_3 {
-    //TODO Option 3: PigLatin Converter --[]
+    //TODO Option 3: PigLatin Converter --[x]
     /*
        Move the first letter of each word to the end of the word.
 
@@ -19,7 +19,7 @@ public class Option_3 {
                           "(e.i. Cats are great pets. -> Atscay areway reatgay etspay) \n"+
                           "Sentence: ");
 
-        //Input.input.nextLine ();
+        Input.input.nextLine ();
         String str = Input.input.nextLine ();
         String[] strArr = str.split ( " ");
         String encoded = "";
